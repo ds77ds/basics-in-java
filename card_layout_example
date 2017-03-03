@@ -1,0 +1,182 @@
+import java.awt.*;
+import java.awt.event.*;
+class card implements ActionListener
+{	
+	Frame f;
+	Button b1,b2;
+	Panel p1,p3,p4,p5,p6;
+	Label l,l1,l2,l3,l4,l5,l6,l7,l8,l9,l10,l11,l12,l13,l14,l15,l16,l17,l18,l19;
+	TextField t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14,t15,t16,t17,t18,t19;
+	int count=0;
+	
+	GridBagConstraints gbc1,gbc2,gbc3,gbc4;
+	CardLayout cl=new CardLayout();
+		Panel p2=new Panel(cl);
+	public card()
+	{	
+		f=new Frame();
+		f.setSize(400,200);
+		
+		//-----------------------------------------------------------
+		
+		//f.setLayout(cl);
+	//----------------------------------------------------
+		p3=new Panel(new GridBagLayout());
+		gbc1=new GridBagConstraints();
+		l1=new Label("Name",Label.RIGHT);
+		t1=new TextField(20);
+		gbc1.gridx=0;		gbc1.gridy=0;
+		p3.add(l1,gbc1);
+		gbc1.gridx=1;		gbc1.gridy=0;
+		p3.add(t1,gbc1);
+		
+		l2=new Label("Surname",Label.RIGHT);
+		t2=new TextField(20);
+		gbc1.gridx=0;		gbc1.gridy=1;
+		p3.add(l2,gbc1);
+		gbc1.gridx=1;		gbc1.gridy=1;
+		p3.add(t2,gbc1);
+		
+		l3=new Label("age",Label.RIGHT);
+		t3=new TextField(20);
+		gbc1.gridx=0;		gbc1.gridy=2;
+		p3.add(l3,gbc1);
+		gbc1.gridx=1;		gbc1.gridy=2;
+		p3.add(t3,gbc1);
+		
+		l4=new Label("Qualification",Label.RIGHT);
+		t4=new TextField(20);
+		gbc1.gridx=0;		gbc1.gridy=3;
+		p3.add(l4,gbc1);
+		gbc1.gridx=1;		gbc1.gridy=3;
+		p3.add(t4,gbc1);
+	//--------------------------------------------------------
+		p4=new Panel(new GridBagLayout());
+		gbc2=new GridBagConstraints();
+		l5=new Label("H No.",Label.RIGHT);
+		t5=new TextField(20);
+		gbc2.gridx=0;		gbc2.gridy=0;
+		p4.add(l5,gbc2);
+		gbc2.gridx=1;		gbc2.gridy=0;
+		p4.add(t5,gbc2);
+		
+		l6=new Label("Colony",Label.RIGHT);
+		t6=new TextField(20);
+		gbc2.gridx=0;		gbc2.gridy=1;
+		p4.add(l6,gbc2);
+		gbc2.gridx=1;		gbc2.gridy=1;
+		p4.add(t6,gbc2);
+		
+		l7=new Label("city",Label.RIGHT);
+		t7=new TextField(20);
+		gbc2.gridx=0;		gbc2.gridy=2;
+		p4.add(l7,gbc2);
+		gbc2.gridx=1;		gbc2.gridy=2;
+		p4.add(t7,gbc2);
+		
+		l8=new Label("State",Label.RIGHT);
+		t8=new TextField(20);
+		gbc2.gridx=0;		gbc2.gridy=3;
+		p4.add(l8,gbc2);
+		gbc2.gridx=1;		gbc2.gridy=3;
+		p4.add(t8,gbc2);
+	//--------------------------------------------------------
+		p5=new Panel(new GridBagLayout());
+		gbc3=new GridBagConstraints();
+		l9=new Label("phone",Label.RIGHT);
+		t9=new TextField(20);
+		gbc3.gridx=0;		gbc3.gridy=0;
+		p5.add(l9,gbc3);
+		gbc3.gridx=1;		gbc3.gridy=0;
+		p5.add(t9,gbc3);
+		
+		l10=new Label("mobile",Label.RIGHT);
+		t10=new TextField(20);
+		gbc3.gridx=0;		gbc3.gridy=1;
+		p5.add(l10,gbc3);
+		gbc3.gridx=1;		gbc3.gridy=1;
+		p5.add(t10,gbc3);
+		
+		l11=new Label("email",Label.RIGHT);
+		t11=new TextField(20);
+		gbc3.gridx=0;		gbc3.gridy=2;
+		p5.add(l11,gbc3);
+		gbc3.gridx=1;		gbc3.gridy=2;
+		p5.add(t11,gbc3);
+		
+		l12=new Label("fax",Label.RIGHT);
+		t12=new TextField(20);
+		gbc3.gridx=0;		gbc3.gridy=3;
+		p5.add(l12,gbc3);
+		gbc3.gridx=1;		gbc3.gridy=3;
+		p5.add(t12,gbc3);
+	//--------------------------------------------------------
+		p6=new Panel(new GridBagLayout());
+		gbc4=new GridBagConstraints();
+		l13=new Label("salary",Label.RIGHT);
+		t13=new TextField(20);
+		gbc4.gridx=0;		gbc4.gridy=0;
+		p6.add(l13,gbc4);
+		gbc4.gridx=1;		gbc4.gridy=0;
+		p6.add(t13,gbc4);
+		
+		l14=new Label("HRA",Label.RIGHT);
+		t14=new TextField(20);
+		gbc4.gridx=0;		gbc4.gridy=1;
+		p6.add(l14,gbc4);
+		gbc4.gridx=1;		gbc4.gridy=1;
+		p6.add(t14,gbc4);
+		
+		l15=new Label("T.A",Label.RIGHT);
+		t15=new TextField(20);
+		gbc4.gridx=0;		gbc4.gridy=2;
+		p6.add(l15,gbc4);
+		gbc4.gridx=1;		gbc4.gridy=2;
+		p6.add(t15,gbc4);
+		
+		l16=new Label("D.A",Label.RIGHT);
+		t16=new TextField(20);
+		gbc4.gridx=0;		gbc4.gridy=3;
+		p6.add(l16,gbc4);
+		gbc4.gridx=1;		gbc4.gridy=3;
+		p6.add(t16,gbc4);
+	//--------------------------------------------------------
+		b1=new Button("Back");		b1.addActionListener(this);
+		b2=new Button("Next");		b2.addActionListener(this);
+		l=new Label("");
+		p1=new Panel(new GridBagLayout());
+		p1.add(b1);		p1.add(l);		p1.add(b2);
+		
+		f.add(p1,"South");
+		
+		p2.add(p3,"three");
+		p2.add(p4,"four");
+		p2.add(p5,"five");
+		p2.add(p6,"six");
+		f.add(p2);
+		f.setVisible(true);
+		
+	}
+	
+	public void actionPerformed(ActionEvent e)
+	{	
+		if(e.getSource()==b1)
+		{
+			if(count>0)
+			{cl.previous(p2);
+			count--;
+			}
+		}
+		else 
+		{
+			cl.next(p2);
+			count++;
+		}
+	}
+	
+	public static void main(String args[])
+	{
+		card cd=new card();
+	}
+	
+}
